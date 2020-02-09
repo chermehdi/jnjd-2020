@@ -41,6 +41,12 @@ is in a winning position if the xor of all the powers is not 0
 ## Towers 
 - See PDF
 
+## Yogioh
+Finding vertex `b` is equivalent to finding vertex `a` on the reversed di-graph.
+
+Assume we start a DFS from some arbitrary vertex of the given graph. If the DFS ends up visiting all vertices, then we found our answer. If it doesn't, then we know our answer, if it exists, is one of the remaining unvisited vertices. We thus relaunch the DFS from another arbitrary unvisited vertex until none remain.
+
+It can be proven that the vertex `a`, if it exists, is the last vertex we launch a DFS from.
 ## Wissal's workout
 - **Quadratic time per query**
 For every query, naively check the correctness of every cyclic shift of the subarray. Since every subarray has
